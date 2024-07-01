@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="odin-lined.png" alt="Logo">
+                <span>Book Library</span>
+            </div>
+            <nav>
+                <label>
+                    <span></span>
+                </label>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="backdrop hide"></div>
+            <div class="edit-book modal hide">
+                <h3>Edit Book</h3>
+                <form name="editBook">
+                    <span>Title</span><input id="editTitle" type="text" required>
+                    <span>Author</span><input id="editAuthor" type="text" required>
+                    <span>Pages</span><input id="editPages" type="number" required min=0>
+                    <span>Read</span><input id="editRead" type="checkbox">
+                    <div>
+                        <button type="submit">Edit book</button>
+                        <!-- <button>Cancel</button> -->
+                        <!-- Removed Cancel, causes crashes?? -->
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="add-book modal hide">
+                <h3>Add Book</h3>
+                <form name="addBook" onsubmit="">
+                    <span>Title</span><input type="text" required>
+                    <span>Author</span><input type="text" required>
+                    <span>Pages</span><input type="number" required min=0>
+                    <span>Read</span><input type="checkbox">
+                    <div><button type="submit">Submit book</button>
+                        <button>Cancel</button></div>
+                </form>
+            </div>
+            <h2>Books Read</h2>
+            <div class="card-container">
+                <div class="card">
+                    <table>
+                        <tr>
+                            <th>Title </th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Author</th>
+                            <td></td>
+                        <tr>
+                            <th>Pages</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Read</th>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="buttons">
+                        <button>Read</button>
+                        <button>Edit</button>
+                        <button>Remove</button>
+                    </div>
+                </div>
+            </div>
+            <button id="addBook">+</button>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            Made by Han 2024 &copy;
+        </div>
+    </footer>
+    
+</body>
+</html>
